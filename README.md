@@ -220,6 +220,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Travel enthusiasts who provide valuable feedback
 
 ---
+
+[![License: MIT](https://img.shields.io/github/license/Suhani1234-5/TourEase)](https://opensource.org/licenses/MIT)
+
 ## 👩‍💻 Author
 
 **Suhani**
