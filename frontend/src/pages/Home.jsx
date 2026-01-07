@@ -18,98 +18,97 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
-      {/* Hero Section */}
-      <div className="min-h-screen bg-white dark:bg-gray-950 font-sans">
-        {/* Hero Section */}
-        <div className="relative min-h-screen w-full bg-[#030712] overflow-hidden flex items-center py-12 lg:py-0">
-          {/* Background Glows */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-teal-500/10 blur-[100px] rounded-full"></div>
-            <div className="absolute bottom-[-5%] right-[-5%] w-[40%] h-[40%] bg-orange-500/5 blur-[100px] rounded-full"></div>
-          </div>
+      {/* ================= HERO SECTION ================= */}
+      <div className="relative min-h-screen w-full bg-white dark:bg-[#030712] overflow-hidden flex items-center py-12 lg:py-0 font-sans">
+        {/* Background Glows */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-teal-500/10 blur-[100px] rounded-full"></div>
+          <div className="absolute bottom-[-5%] right-[-5%] w-[40%] h-[40%] bg-orange-500/5 blur-[100px] rounded-full"></div>
+        </div>
 
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-12 w-full z-10">
-            <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6 text-left animate-in fade-in slide-in-from-left duration-700 order-1">
-                <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 backdrop-blur-xl px-4 py-1.5 rounded-full">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                  </span>
-                  <span className="text-orange-400 text-[10px] font-bold uppercase tracking-[0.2em]">
-                    Explore the World!
-                  </span>
-                </div>
-
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter">
-                  Your Smart Travel
-                  <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-emerald-400 to-cyan-500">
-                    Assistant Awaits
-                  </span>
-                </h1>
-
-                <p className="text-base md:text-lg text-gray-400 max-w-md leading-relaxed font-medium">
-                  Plan smarter, travel better! Whether you're exploring nearby
-                  or venturing abroad, our intelligent assistant has everything
-                  covered — from itineraries to bookings, all in one place.
-                </p>
-
-                <div className="flex flex-wrap gap-4">
-                  <Link
-                    to="/signup"
-                    className="px-8 py-3.5 bg-orange-600 hover:bg-orange-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg shadow-orange-900/20 active:scale-95 text-md flex items-center justify-center min-w-[180px]"
-                  >
-                    Start Your Journey
-                  </Link>
-
-                  <Link
-                    to="/explore"
-                    className="px-8 py-3.5 bg-white/5 border border-white/10 backdrop-blur-md text-white hover:bg-white/10 rounded-xl font-bold transition-all duration-300 active:scale-95 text-md flex items-center justify-center min-w-[180px]"
-                  >
-                    Explore Features
-                  </Link>
-                </div>
-
-                <div className="flex items-center gap-8 pt-4">
-                  <div>
-                    <p className="text-3xl font-black text-white">
-                      50K<span className="text-orange-500">+</span>
-                    </p>
-                    <p className="text-[9px] uppercase tracking-widest text-gray-500 font-bold">
-                      Adventurers
-                    </p>
-                  </div>
-                  <div className="h-8 w-[1px] bg-white/10"></div>
-                  <div>
-                    <p className="text-3xl font-black text-white">
-                      150<span className="text-teal-400">+</span>
-                    </p>
-                    <p className="text-[9px] uppercase tracking-widest text-gray-500 font-bold">
-                      Destinations
-                    </p>
-                  </div>
-                </div>
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-12 w-full z-10">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
+            {/* LEFT */}
+            <div className="space-y-6 text-left animate-in fade-in slide-in-from-left duration-700">
+              <div className="inline-flex items-center space-x-2 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 backdrop-blur-xl px-4 py-1.5 rounded-full">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                </span>
+                <span className="text-orange-500 text-[10px] font-bold uppercase tracking-[0.2em]">
+                  Explore the World!
+                </span>
               </div>
 
-              <div className="relative order-2 lg:order-2 w-full flex justify-center lg:justify-end">
-                <div className="relative z-20 animate-float-slow max-w-[420px] lg:max-w-[480px] w-full">
-                  <div className="rounded-[2.5rem] p-2 bg-white/5 border border-white/10 backdrop-blur-sm shadow-2xl overflow-hidden">
-                    <div className="rounded-[2rem] overflow-hidden relative group">
-                      <img
-                        src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop"
-                        alt="Luxury Tourism"
-                        className="w-full h-[300px] md:h-[380px] lg:h-[480px] object-cover transition-transform duration-[3s] group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/70 via-transparent to-transparent"></div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 dark:text-white leading-[1.1] tracking-tighter">
+                Your Smart Travel
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-500 to-cyan-500">
+                  Assistant Awaits
+                </span>
+              </h1>
 
-                      <div className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-xl px-4 py-2 rounded-2xl border border-white/20 shadow-xl">
-                        <div className="flex items-center gap-2">
-                          <span className="text-teal-400">✦</span>
-                          <p className="text-white text-[10px] font-bold uppercase tracking-wider">
-                            Top Rated Experience
-                          </p>
-                        </div>
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-md leading-relaxed font-medium">
+                Plan smarter, travel better! Whether you're exploring nearby or
+                venturing abroad, our intelligent assistant has everything
+                covered — from itineraries to bookings, all in one place.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  to="/signup"
+                  className="px-8 py-3.5 bg-orange-600 hover:bg-orange-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg shadow-orange-900/20 active:scale-95 text-md flex items-center justify-center min-w-[180px]"
+                >
+                  Start Your Journey
+                </Link>
+
+                <Link
+                  to="/explore"
+                  className="px-8 py-3.5 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 rounded-xl font-bold transition-all duration-300 active:scale-95 text-md flex items-center justify-center min-w-[180px]"
+                >
+                  Explore Features
+                </Link>
+              </div>
+
+              <div className="flex items-center gap-8 pt-4">
+                <div>
+                  <p className="text-3xl font-black text-gray-900 dark:text-white">
+                    50K<span className="text-orange-500">+</span>
+                  </p>
+                  <p className="text-[9px] uppercase tracking-widest text-gray-500 font-bold">
+                    Adventurers
+                  </p>
+                </div>
+                <div className="h-8 w-[1px] bg-gray-300 dark:bg-white/10"></div>
+                <div>
+                  <p className="text-3xl font-black text-gray-900 dark:text-white">
+                    150<span className="text-teal-400">+</span>
+                  </p>
+                  <p className="text-[9px] uppercase tracking-widest text-gray-500 font-bold">
+                    Destinations
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative w-full flex justify-center lg:justify-end">
+              <div className="relative z-20 animate-float-slow max-w-[420px] lg:max-w-[480px] w-full">
+                <div className="rounded-[2.5rem] p-2 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 backdrop-blur-sm shadow-2xl overflow-hidden">
+                  <div className="rounded-[2rem] overflow-hidden relative group">
+                    <img
+                      src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop"
+                      alt="Luxury Tourism"
+                      className="w-full h-[300px] md:h-[380px] lg:h-[480px] object-cover transition-transform duration-[3s] group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+                    <div className="absolute bottom-6 left-6 bg-white/70 dark:bg-white/10 backdrop-blur-xl px-4 py-2 rounded-2xl border border-white/40 dark:border-white/20 shadow-xl">
+                      <div className="flex items-center gap-2">
+                        <span className="text-teal-500">✦</span>
+                        <p className="text-gray-900 dark:text-white text-[10px] font-bold uppercase tracking-wider">
+                          Top Rated Experience
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -117,18 +116,18 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <style>{`
-            @keyframes float-slow {
-              0%, 100% { transform: translateY(0px); }
-              50% { transform: translateY(-12px); }
-            }
-            .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
-          `}</style>
         </div>
+
+        <style>{`
+          @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+          }
+          .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+        `}</style>
       </div>
 
-      {/* Features Section */}
+      {/* ================= FEATURES SECTION ================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-900 dark:text-white">
           Everything You Need to Travel
@@ -199,7 +198,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* How It Works Section */}
+      {/* ================= HOW IT WORKS ================= */}
       <div className="bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-gray-900 dark:to-gray-950 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-900 dark:text-white">
@@ -247,7 +246,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Community Section */}
+      {/* ================= COMMUNITY ================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-900 dark:text-white">
           Join Our Global Travel{" "}
@@ -303,7 +302,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* CTA Section */}
+      {/* ================= CTA SECTION ================= */}
       <div className="bg-gradient-to-br from-teal-400 via-teal-500 to-cyan-600 text-white py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-block bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold mb-6">
@@ -338,7 +337,6 @@ export default function Home() {
               <div className="text-3xl md:text-4xl font-bold mb-2">Free</div>
               <div className="text-base opacity-80">Forever Plan</div>
             </div>
-
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-2">5 Min</div>
               <div className="text-base opacity-80">Setup Time</div>
@@ -355,7 +353,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Footer */}
+      {/* ================= FOOTER ================= */}
       <footer className="bg-[#0b1120] text-gray-400 py-16 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
