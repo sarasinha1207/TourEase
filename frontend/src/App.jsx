@@ -1,3 +1,4 @@
+import Loader from './components/common/Loader';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -21,6 +22,7 @@ import AddFavorite from "./pages/AddFavorite";
 import ScrollToTopButton from "./components/common/ScrollToTop";
 import DestinationDetails from "./pages/DestinationDetails";
 import OAuthSuccess from "./pages/OAuthSuccess";
+import NotFound from "./components/NotFound";
 
 function ProtectedRoute({ children }) {
   const isAuthenticated = Boolean(localStorage.getItem("token"));
@@ -61,6 +63,7 @@ function AppRoutes() {
           <Route path="/favorites" element={<AddFavorite />} />
           <Route path="/destinations/:id" element={<DestinationDetails />} />
           <Route path="/oauth-success" element={<OAuthSuccess />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </>
@@ -68,6 +71,20 @@ function AppRoutes() {
 }
 
 export default function App() {
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    // This simulates the app "loading" data for 2 seconds
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+  
   return (
     <FavoritesProvider>
       <Router>
