@@ -49,18 +49,6 @@ export default function About() {
             color="bg-orange-100 text-orange-600 dark:bg-orange-950 dark:text-orange-300"
           />
           <ValueCard
-            icon={<Zap className="w-12 h-12" />}
-            title="Innovation"
-            description="We constantly push boundaries to bring cutting-edge AI and technology to the travel industry."
-            color="bg-yellow-100 text-yellow-600 dark:bg-yellow-950 dark:text-yellow-300"
-          />
-          <ValueCard
-            icon={<Users className="w-12 h-12" />}
-            title="Community"
-            description="We foster a vibrant global community where travelers connect, share, and inspire each other."
-            color="bg-blue-100 text-blue-600 dark:bg-indigo-950 dark:text-indigo-300"
-          />
-          <ValueCard
             icon={<Award className="w-12 h-12" />}
             title="Excellence"
             description="We're committed to delivering exceptional quality in every feature, interaction, and experience."
